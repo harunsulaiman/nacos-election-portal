@@ -1,9 +1,8 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
 import '../pages/admin.css';
-// import Footer from '../app/footer';
+import { API_BASE_URL } from '../config'; // ✅ import shared base URL
 
 export default function Admin() {
   const [password, setPassword] = useState('');
@@ -18,7 +17,7 @@ export default function Admin() {
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const res = await fetch('http://localhost:3001/api/candidates');
+        const res = await fetch(`${API_BASE_URL}/api/candidates`);
         if (res.ok) {
           setCandidates(await res.json());
         } else {
@@ -28,11 +27,12 @@ export default function Admin() {
         setError('Error connecting to the server.');
       }
     };
+
     const fetchElectionConfig = async () => {
       try {
-        const res = await fetch('http://localhost:3001/api/election-status');
+        const res = await fetch(`${API_BASE_URL}/api/election-status`);
         if (res.ok) {
-          const config = await fetch('http://localhost:3001/api/election-config');
+          const config = await fetch(`${API_BASE_URL}/api/election-config`);
           if (config.ok) {
             const data = await config.json();
             setStartTime(data.startTime.slice(0, 16));
@@ -47,6 +47,7 @@ export default function Admin() {
         setError('Error connecting to the server.');
       }
     };
+
     fetchCandidates();
     if (isAuthenticated) fetchElectionConfig();
   }, [isAuthenticated]);
@@ -56,7 +57,7 @@ export default function Admin() {
       setIsAuthenticated(true);
       setError('');
       try {
-        const res = await fetch('http://localhost:3001/api/results');
+        const res = await fetch(`${API_BASE_URL}/api/results`);
         if (res.ok) {
           setVotes((await res.json()).votes);
         } else {
@@ -83,7 +84,7 @@ export default function Admin() {
   const handleSaveVotes = async () => {
     setIsSubmitting(true);
     try {
-      const res = await fetch('http://localhost:3001/api/update-votes', {
+      const res = await fetch(`${API_BASE_URL}/api/update-votes`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ votes, adminPassword: password }),
@@ -104,7 +105,7 @@ export default function Admin() {
   const handleSaveConfig = async () => {
     setIsSubmitting(true);
     try {
-      const res = await fetch('http://localhost:3001/api/update-config', {
+      const res = await fetch(`${API_BASE_URL}/api/update-config`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ startTime, endTime, adminPassword: password }),
@@ -145,6 +146,7 @@ export default function Admin() {
       ) : (
         <div className="admin-panel">
           {error && <p className="error-message">{error}</p>}
+
           <div className="config-section">
             <h3 className="section-subtitle">Election Schedule</h3>
             <div className="config-item">
@@ -173,6 +175,7 @@ export default function Admin() {
               {isSubmitting ? 'Saving...' : 'Save Election Times'}
             </button>
           </div>
+
           <div className="vote-section">
             <h3 className="section-subtitle">Manage Votes</h3>
             {positions.map((position) => (
@@ -187,7 +190,9 @@ export default function Admin() {
                         type="number"
                         min="0"
                         value={votes[position]?.[candidate.id] || 0}
-                        onChange={(e) => handleVoteChange(position, candidate.id, e.target.value)}
+                        onChange={(e) =>
+                          handleVoteChange(position, candidate.id, e.target.value)
+                        }
                         className="vote-input"
                       />
                     </div>
@@ -204,7 +209,6 @@ export default function Admin() {
           </div>
         </div>
       )}
-      {/* <Footer /> */}
     </div>
   );
 }

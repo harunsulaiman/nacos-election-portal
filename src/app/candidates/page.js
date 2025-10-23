@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import '../styles.css';
 import Footer from '../components/footer';
+import { API_BASE_URL } from "../app/config";
 
 export default function Candidates() {
   const [candidates, setCandidates] = useState([]);
@@ -12,7 +13,7 @@ export default function Candidates() {
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const res = await fetch('http://localhost:3001/api/candidates');
+        const res = await fetch(`${API_BASE_URL}/api/candidates`);
         if (res.ok) {
           const data = await res.json();
           setCandidates(data);
@@ -34,7 +35,9 @@ export default function Candidates() {
       <p className="page-subtitle">
         Discover the vision and passion of our candidates for the 2025 NACOS election.
       </p>
+
       {error && <p className="error-message">{error}</p>}
+
       {positions.map((position) => (
         <div key={position} className="position-section">
           <h2 className="section-title">{position}</h2>
@@ -55,9 +58,11 @@ export default function Candidates() {
           </div>
         </div>
       ))}
+
       <Link href="/vote" className="vote-now-btn">
         Vote Now
       </Link>
+
       <Footer />
     </div>
   );

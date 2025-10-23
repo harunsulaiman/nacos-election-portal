@@ -3,6 +3,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import '../styles.css';
 import Footer from '../components/footer';
+import { API_BASE_URL } from "../config";
+
+fetch(`${API_BASE_URL}/api/candidates`);
+
 
 export default function Vote() {
   const [voterId, setVoterId] = useState('');

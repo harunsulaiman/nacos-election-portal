@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import '../pages/results.css';
 import Footer from '../app/components/footer';
+import { API_BASE_URL } from '../config'; // ✅ Import your backend base URL
 
 export default function Results() {
   const [votes, setVotes] = useState({});
@@ -10,11 +11,10 @@ export default function Results() {
   const [error, setError] = useState('');
   const [electionStatus, setElectionStatus] = useState('pending');
 
-  // Fetch data initially and every 5 seconds to update dynamically
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const res = await fetch('http://localhost:3001/api/candidates');
+        const res = await fetch(`${API_BASE_URL}/api/candidates`);
         if (res.ok) {
           const data = await res.json();
           setCandidates(data);
@@ -28,7 +28,7 @@ export default function Results() {
 
     const fetchResults = async () => {
       try {
-        const res = await fetch('http://localhost:3001/api/results');
+        const res = await fetch(`${API_BASE_URL}/api/results`);
         if (res.ok) {
           const data = await res.json();
           setVotes(data.votes);
@@ -42,7 +42,7 @@ export default function Results() {
 
     const fetchElectionStatus = async () => {
       try {
-        const res = await fetch('http://localhost:3001/api/election-status');
+        const res = await fetch(`${API_BASE_URL}/api/election-status`);
         if (res.ok) {
           const data = await res.json();
           setElectionStatus(data.status);
