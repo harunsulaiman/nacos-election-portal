@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import '../pages/results.css';
 import Footer from '../app/components/footer';
-import { API_BASE_URL } from './app/config'; // ✅ Import your backend base URL
+import { API_BASE_URL } from '../config'; // ✅ Import your backend base URL
 
 export default function Results() {
   const [votes, setVotes] = useState({});
