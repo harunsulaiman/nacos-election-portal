@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import '../pages/admin.css';
-import { API_BASE_URL } from '../config'; // ✅ import shared base URL
+import { API_BASE_URL } from './config'; // ✅ import shared base URL
 
 export default function Admin() {
   const [password, setPassword] = useState('');
