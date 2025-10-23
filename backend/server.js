@@ -169,7 +169,8 @@ app.post('/api/submit-vote', (req, res) => {
   if (!voterId || !selectedCandidates) {
     return res.status(400).json({ error: 'Voter ID and selections required' });
   }
-  const isValidVoter = eligibleVoters.includes(voterId.toUpperCase());
+ const isValid = eligibleVoters.map(v => v.trim().toUpperCase()).includes(voterId.trim().toUpperCase());
+
   if (!isValidVoter) {
     return res.status(403).json({ error: 'Unauthorized voter' });
   }

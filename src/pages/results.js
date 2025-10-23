@@ -2,8 +2,8 @@
   "use client";
 
   import { useState, useEffect } from 'react';
-  // import './results.css';
-  // import Footer from '../components/footer';
+  import '../pages/results.css';
+  import Footer from '../app/components/footer';
 
   export default function Results() {
     const [votes, setVotes] = useState({});
@@ -92,7 +92,7 @@
             ))}
           </div>
         )}
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }

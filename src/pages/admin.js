@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-// import './admin.css';
+import '../pages/admin.css';
 // import Footer from '../app/footer';
 
 export default function Admin() {

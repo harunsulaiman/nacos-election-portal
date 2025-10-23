@@ -17,10 +17,11 @@
       "static/css/app/vote/page.css",
       "static/chunks/app/vote/page.js"
     ],
-    "/_not-found/page": [
+    "/candidates/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/css/app/candidates/page.css",
+      "static/chunks/app/candidates/page.js"
     ]
   }
 }

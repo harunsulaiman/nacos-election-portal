@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import '../styles.css';
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 
 export default function Vote() {
   const [voterId, setVoterId] = useState('');
@@ -151,12 +151,12 @@ export default function Vote() {
       {error && <p className="error-message">{error}</p>}
       {!isEligible ? (
         <div className="voter-id-section">
-          <p className="section-subtitle">Enter your candidate departmental ID:</p>
+          <p className="section-subtitle">Enter your  departmental ID NUMBER:</p>
           <input
             type="text"
             value={voterId}
             onChange={(e) => setVoterId(e.target.value)}
-            placeholder="e.g., CS1001"
+            placeholder="e.g., 22/08/05/0001"
             className="voter-id-input"
           />
           <button
