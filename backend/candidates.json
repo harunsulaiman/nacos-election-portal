@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Abu Sheriff Mustapha",
+    "position": "President",
+    "deptId": "CS1001",
+    "bio": "Passionate about community building, Sheriff aims to drive tech innovation.",
+    "avatar": "https://via.placeholder.com/120?text=Sheriff"
+  },
+  {
+    "id": 2,
+    "name": "Muhammad Babagana",
+    "position": "President",
+    "deptId": "CS1002",
+    "bio": "A coding enthusiast with a vision for inclusive tech education.",
+    "avatar": "https://via.placeholder.com/120?text=Muhammad"
+  },
+  {
+    "id": 3,
+    "name": "Wal Amma",
+    "position": "Vice President",
+    "deptId": "CS1003",
+    "bio": "Dedicated to mentorship and advancing women in tech.",
+    "avatar": "https://via.placeholder.com/120?text=Wal"
+  },
+  {
+    "id": 4,
+    "name": "David Okeke",
+    "position": "Vice President",
+    "deptId": "CS1004",
+    "bio": "Focused on bridging academia and industry for NACOS members.",
+    "avatar": "https://via.placeholder.com/120?text=David"
+  },
+  {
+    "id": 5,
+    "name": "David Okeke",
+    "position": "Tresurer",
+    "deptId": "CS1004",
+    "bio": "Focused on bridging academia and industry for NACOS members.",
+    "avatar": "https://via.placeholder.com/120?text=David"
+  },
+  {
+    "id": 6,
+    "name": "David Okeke",
+    "position": "Tresurer",
+    "deptId": "CS1004",
+    "bio": "Focused on bridging academia and industry for NACOS members.",
+    "avatar": "https://via.placeholder.com/120?text=David"
+  },
+  {
+    "id": 7,
+    "name": "Esther Adebayo",
+    "position": "organizing Secretary",
+    "deptId": "CS1005",
+    "bio": "Organized and detail-oriented, Esther ensures seamless operations.",
+    "avatar": "https://via.placeholder.com/120?text=Esther"
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "votes": {
+    "President": {
+      "1": 71,
+      "2": 2
+    },
+    "Vice President": {
+      "3": 0,
+      "4": 2
+    },
+    "Tresurer": {
+      "5": 3,
+      "6": 0
+    },
+    "organizing Secretary": {
+      "7": 3
+    },
+    "Secretary": {
+      "5": 0
+    }
+  },
+  "voters": {
+    "cs001": {
+      "President": true,
+      "Vice President": true,
+      "Tresurer": true,
+      "organizing Secretary": true
+    },
+    "22/08/05/0136": {
+      "President": true,
+      "Vice President": true
+    },
+    "cs002": {
+      "President": true,
+      "Tresurer": true,
+      "organizing Secretary": true
+    },
+    "cs003": {
+      "organizing Secretary": true
+    },
+    "cs004": {
+      "President": true,
+      "Tresurer": true
+    }
+  }
+}
