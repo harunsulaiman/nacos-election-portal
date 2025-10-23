@@ -23,7 +23,7 @@ export default function Vote() {
   useEffect(() => {
     const fetchCandidates = async () => {
       try {
-        const res = await fetch('http://localhost:3001/api/candidates'); // Replace with 'https://nacos-backend.onrender.com/api/candidates' after deployment
+        const res = await fetch(`${API_BASE_URL}/api/candidates`); // Replace with 'https://nacos-backend.onrender.com/api/candidates' after deployment
         if (res.ok) {
           const data = await res.json();
           setCandidates(data);
@@ -37,7 +37,7 @@ export default function Vote() {
 
     const fetchResults = async () => {
       try {
-        const res = await fetch('http://localhost:3001/api/results'); // Replace with 'https://nacos-backend.onrender.com/api/results' after deployment
+        const res = await fetch(`${API_BASE_URL}/api/results`); // Replace with 'https://nacos-backend.onrender.com/api/results' after deployment
         if (res.ok) {
           const data = await res.json();
           setVotes(data.votes);
@@ -60,7 +60,7 @@ export default function Vote() {
     }
     setIsSubmitting(true);
     try {
-      const res = await fetch('http://localhost:3001/api/validate-voter', {
+      const res = await fetch(`${API_BASE_URL}/api/validate-voter`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ voterId: voterId.trim() }),
@@ -93,7 +93,7 @@ export default function Vote() {
     }
     setIsSubmitting(true);
     try {
-      const res = await fetch('http://localhost:3001/api/submit-vote', {
+      const res = await fetch(`${API_BASE_URL}/api/submit-votes`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ voterId, selectedCandidates }),
@@ -119,7 +119,7 @@ export default function Vote() {
   const handleReset = useCallback(async () => {
     setIsSubmitting(true);
     try {
-      const res = await fetch('http://localhost:3001/api/reset', {
+      const res = await fetch(`${API_BASE_URL}/api/reset`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
       });
