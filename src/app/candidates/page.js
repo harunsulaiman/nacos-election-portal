@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import '../styles.css';
 import Footer from '../components/footer';
-import { API_BASE_URL } from "../app/config";
+import { API_BASE_URL } from "../config.js";
 
 export default function Candidates() {
   const [candidates, setCandidates] = useState([]);
