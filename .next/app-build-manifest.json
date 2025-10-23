@@ -1,0 +1,45 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-b0142f7635261ada.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-cf2e1d3491ac955b.js",
+      "static/chunks/main-app-91dc8226f0ea15bd.js",
+      "static/chunks/app/_not-found/page-102fce97793b089c.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-b0142f7635261ada.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-cf2e1d3491ac955b.js",
+      "static/chunks/main-app-91dc8226f0ea15bd.js",
+      "static/css/7e7d96b1e6991756.css",
+      "static/css/2d2c4bc2b6a0050c.css",
+      "static/chunks/app/layout-6d5735a5925e478f.js"
+    ],
+    "/candidates/page": [
+      "static/chunks/webpack-b0142f7635261ada.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-cf2e1d3491ac955b.js",
+      "static/chunks/main-app-91dc8226f0ea15bd.js",
+      "static/css/2d2c4bc2b6a0050c.css",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/app/candidates/page-482bda3df96ca78f.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-b0142f7635261ada.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-cf2e1d3491ac955b.js",
+      "static/chunks/main-app-91dc8226f0ea15bd.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/app/page-8cdaa9b3357a0328.js"
+    ],
+    "/vote/page": [
+      "static/chunks/webpack-b0142f7635261ada.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-cf2e1d3491ac955b.js",
+      "static/chunks/main-app-91dc8226f0ea15bd.js",
+      "static/css/2d2c4bc2b6a0050c.css",
+      "static/chunks/app/vote/page-0912239241ae7a4d.js"
+    ]
+  }
+}
