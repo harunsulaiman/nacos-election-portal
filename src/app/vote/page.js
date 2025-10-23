@@ -93,7 +93,7 @@ export default function Vote() {
     }
     setIsSubmitting(true);
     try {
-      const res = await fetch(`${API_BASE_URL}/api/submit-votes`, {
+      const res = await fetch(`${API_BASE_URL}/api/submit-vote`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ voterId, selectedCandidates }),
